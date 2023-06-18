@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottomItem1"
+        android:icon="@drawable/bottomlogobard"
+        android:title="Bard AI " />
+    <item
+        android:id="@+id/bottomItem2"
+        android:icon="@drawable/bottomlogochat"
+        android:title="Chat GPT" />
+</menu>
