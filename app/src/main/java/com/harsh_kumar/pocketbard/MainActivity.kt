@@ -39,13 +39,17 @@ class MainActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener {
             when (it.itemId){
-                R.id.item1 -> Toast.makeText(applicationContext,"Because, why not?", Toast.LENGTH_SHORT ).show()
-                R.id.item2 -> {
-                    val urlPortfolio = "https://www.linkedin.com/in/harsh-kumar-13496925a"
+                R.id.item1 -> {
+                    val urlPortfolio = "https://harsh-apk1.github.io/Portfolio/Others/Pocket%20AI/PocketAI.html#WhyPocketAI"
                     openUrlInChrome(urlPortfolio)
 
                 }
-                R.id.item3 -> Toast.makeText(applicationContext,"Coming Soon ",Toast.LENGTH_SHORT).show()
+                R.id.item2 -> {
+                    val urlPortfolio = "https://harsh-apk1.github.io/Portfolio/"
+                    openUrlInChrome(urlPortfolio)
+
+                }
+                R.id.item3 -> Toast.makeText(applicationContext,"Coming Soon 🤗",Toast.LENGTH_SHORT).show()
 
             }
             true
@@ -86,12 +90,12 @@ class MainActivity : AppCompatActivity() {
     private fun openUrlInChrome(url: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        intent.setPackage("com.linkedin.android")
+        intent.setPackage("com.android.chrome")
         if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         } else {
             // Chrome is not installed, handle the situation as needed
-            Toast.makeText(applicationContext, "LinkedIn is not installed", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Google Chrome is not installed", Toast.LENGTH_SHORT).show()
         }
     }
 
